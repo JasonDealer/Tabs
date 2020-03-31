@@ -103,4 +103,84 @@ window.addEventListener('DOMContentLoaded', function(){
     }
     setClock('timer', deadline);
 
+    //modal window
+    let more = document.querySelector('.more'),
+    overlay = document.querySelector('.overlay'),
+    close = document.querySelector('.popup-close');
+
+    more.addEventListener('click', function() {
+
+        overlay.style.display = 'block';
+        this.classList.add('more-splash');
+        document.body.style.overflow = 'hidden';
+    });
+
+    close.addEventListener('click', function(){
+        overlay.style.display = 'none';
+        more.classList.remove('more-splash');
+        document.body.style.overflow = '';
+    });
+
+    //tabs windows
+
+/*     let more = document.querySelector('.more'),
+    overlay = document.querySelector('.overlay'),
+    close = document.querySelector('.popup-close'); */
+    let descBtnCure = document.querySelectorAll('.description-btn')[0],
+        descBtnRelax = document.querySelectorAll('.description-btn')[1],
+        descBtnNature = document.querySelectorAll('.description-btn')[2],
+        descBtnYoga = document.querySelectorAll('.description-btn')[3];
+
+       //Cure
+    descBtnCure.addEventListener('click', function() {
+
+        overlay.style.display = 'block';
+        this.classList.add('more-splash');
+        document.body.style.overflow = 'hidden';
+    });
+
+    close.addEventListener('click', function(){
+        overlay.style.display = 'none';
+        descBtnCure.classList.remove('more-splash');
+        document.body.style.overflow = '';
+    });
+    //relax
+    descBtnRelax.addEventListener('click', function() {
+
+        overlay.style.display = 'block';
+        this.classList.add('more-splash');
+        document.body.style.overflow = 'hidden';
+    });
+
+    close.addEventListener('click', function(){
+        overlay.style.display = 'none';
+        descBtnRelax.classList.remove('more-splash');
+        document.body.style.overflow = '';
+    });
+    //nature
+    descBtnNature.addEventListener('click', function() {
+
+        overlay.style.display = 'block';
+        this.classList.add('more-splash');
+        document.body.style.overflow = 'hidden';
+    });
+
+    close.addEventListener('click', function(){
+        overlay.style.display = 'none';
+        descBtnNature.classList.remove('more-splash');
+        document.body.style.overflow = '';
+    });
+    //yoga
+    descBtnYoga.addEventListener('click', function() {
+
+        overlay.style.display = 'block';
+        this.classList.add('more-splash');
+        document.body.style.overflow = 'hidden';
+    });
+
+    close.addEventListener('click', function(){
+        overlay.style.display = 'none';
+        descBtnYoga.classList.remove('more-splash');
+        document.body.style.overflow = '';
+    });
 });
